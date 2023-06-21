@@ -1,0 +1,1354 @@
+<html lang="en-US">
+<script id="allow-copy_script">
+    (function agent() {
+        let unlock = false;
+        document.addEventListener("allow_copy", (event) => {
+            unlock = event.detail.unlock;
+        });
+
+        const copyEvents = [
+            "copy",
+            "cut",
+            "contextmenu",
+            "selectstart",
+            "mousedown",
+            "mouseup",
+            "mousemove",
+            "keydown",
+            "keypress",
+            "keyup",
+        ];
+        const rejectOtherHandlers = (e) => {
+            if (unlock) {
+                e.stopPropagation();
+                if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+            }
+        };
+        copyEvents.forEach((evt) => {
+            document.documentElement.addEventListener(evt, rejectOtherHandlers, {
+                capture: true,
+            });
+        });
+    })();
+</script>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./assests/css/style.min.css" media="all" />
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&amp;family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&amp;family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="#" />
+    <link rel="stylesheet" href="./assests/css/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/regular.min.css" integrity="sha512-WidMaWaNmZqjk3gDE6KBFCoDpBz9stTsTZZTeocfq/eDNkLfpakEd7qR0bPejvy/x0iT0dvzIq4IirnBtVer5A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assests/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assests/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assests/css/custom-style.css" />
+    <link rel="stylesheet" href="./assests/css/svg.css">
+    <style>
+.shuja {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+}
+    </style>
+    <title>Shuja ahmad</title>
+</head>
+
+<body class="home  wp-embed-responsive">
+    <menu class="main-menu">
+        <div class="mbtn mbtn-cl">
+            <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10 fa-5x">
+                <path fill="currentColor"
+                    d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                    class=""></path>
+            </svg>
+        </div>
+        <div class="main-menu__top">
+            <div class="logo fade-enter-done" tabindex="-1">
+                <a href="#" rel="home">
+                    <span class="">&lt;A/&gt;</span> &nbsp;
+                    <div>Shuja Ahmad</div>
+                </a>
+            </div>
+            <span>Web Developer</span>
+        </div>
+        <a class="move-to-section-btn" href="#about">About</a><a class="move-to-section-btn"
+            href="#jobs">Experience</a><a class="move-to-section-btn" href="#projects">Work</a><a
+            class="move-to-section-btn" href="#testimonials">Testimonials</a><a class="move-to-section-btn"
+            href="#blog">Blog</a><a class="move-to-section-btn" href="#contact">Contact</a>
+        <ul class="social">
+            <li>
+                <a href="#" aria-label="GitHub" target="_blank" rel="noreferrer">
+                    <div class="wrapper">
+                        <div class="icon Github">
+                            <span class="tooltip-custom">Github</span>
+                            <img src="./assests/image/github.svg"
+                                alt="github" />
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" aria-label="Linkedin" target="_blank"
+                    rel="noreferrer">
+                    <div class="wrapper">
+                        <div class="icon linkedin">
+                            <span class="tooltip-custom">linkedin</span>
+                            <img src="./assests/image/linkedin.svg"
+                                alt="linkedin" />
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" aria-label="upwork" target="_blank"
+                    rel="noreferrer">
+                    <div class="wrapper">
+                        <div class="icon hackerrank">
+                            <span class="tooltip-custom">upwork</span>
+                            <img src="#"
+                                alt="upwork" />
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </menu>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+                </feColorMatrix>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627"></feFuncR>
+                    <feFuncG type="table" tableValues="0 0.49803921568627"></feFuncG>
+                    <feFuncB type="table" tableValues="0 0.49803921568627"></feFuncB>
+                    <feFuncA type="table" tableValues="1 1"></feFuncA>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"></feComposite>
+            </filter>
+        </defs>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+                </feColorMatrix>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1"></feFuncR>
+                    <feFuncG type="table" tableValues="0 1"></feFuncG>
+                    <feFuncB type="table" tableValues="0 1"></feFuncB>
+                    <feFuncA type="table" tableValues="1 1"></feFuncA>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"></feComposite>
+            </filter>
+        </defs>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+                </feColorMatrix>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765"></feFuncR>
+                    <feFuncG type="table" tableValues="0 1"></feFuncG>
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431"></feFuncB>
+                    <feFuncA type="table" tableValues="1 1"></feFuncA>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"></feComposite>
+            </filter>
+        </defs>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+                </feColorMatrix>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1"></feFuncR>
+                    <feFuncG type="table" tableValues="0 0.27843137254902"></feFuncG>
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902"></feFuncB>
+                    <feFuncA type="table" tableValues="1 1"></feFuncA>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"></feComposite>
+            </filter>
+        </defs>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+                </feColorMatrix>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0"></feFuncR>
+                    <feFuncG type="table" tableValues="0 0.64705882352941"></feFuncG>
+                    <feFuncB type="table" tableValues="0 1"></feFuncB>
+                    <feFuncA type="table" tableValues="1 1"></feFuncA>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"></feComposite>
+            </filter>
+        </defs>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+                </feColorMatrix>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1"></feFuncR>
+                    <feFuncG type="table" tableValues="0 0.94901960784314"></feFuncG>
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412"></feFuncB>
+                    <feFuncA type="table" tableValues="1 1"></feFuncA>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"></feComposite>
+            </filter>
+        </defs>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+                </feColorMatrix>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745"></feFuncR>
+                    <feFuncG type="table" tableValues="0 1"></feFuncG>
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4"></feFuncB>
+                    <feFuncA type="table" tableValues="1 1"></feFuncA>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"></feComposite>
+            </filter>
+        </defs>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+                </feColorMatrix>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1"></feFuncR>
+                    <feFuncG type="table" tableValues="0 0.66274509803922"></feFuncG>
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725"></feFuncB>
+                    <feFuncA type="table" tableValues="1 1"></feFuncA>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"></feComposite>
+            </filter>
+        </defs>
+    </svg>
+    <a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+    <header class="nav-header-main">
+        <nav class="nav-header-inner">
+            <div class="logo fade-enter-done" tabindex="-1">
+                <a href="#" rel="home">
+                    <span class="">&lt;A/&gt;</span> &nbsp;
+                    <div>Shuja Ahmad</div>
+                </a>
+            </div>
+            <div class="nav-header-right">
+                <ol>
+                    <li class="fadedown-enter-done" style="transition-delay: 100ms">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="fadedown-enter-done" style="transition-delay: 200ms">
+                        <a href="#jobs">Experience</a>
+                    </li>
+                    <li class="fadedown-enter-done" style="transition-delay: 300ms">
+                        <a href="#projects">Work</a>
+                    </li>
+                    <li class="fadedown-enter-done" style="transition-delay: 400ms">
+                        <a href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="fadedown-enter-done" style="transition-delay: 500ms">
+                        <a href="#blog">Blog</a>
+                    </li>
+                    <li class="fadedown-enter-done" style="transition-delay: 600ms">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ol>
+                <div class="fadedown-enter-done" style="transition-delay: 400ms">
+                    <a class="resume-button contact-me-main-landing btn-diagonal-swipe" href="#"
+                        target="_blank" rel="noopener noreferrer">Resume</a>
+                </div>
+            </div>
+            <div class="nav-menu-mobile">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="main-top-content">
+            <canvas id="canvas"></canvas>
+            <div class="background-gradient-fix"></div>
+            <div class="home-page-section-1 row" id="home">
+                <div class="left-content col-lg-7">
+                    <div class="section-title-wrapper">
+                        <div class="text-zone">
+                            <h1 aria-label="Hello I am  Shuja" class="blast-root htmltagStyles htmlendtagStyles">
+                                <span class="blast animated bounceIn" aria-hidden="true">H</span><span
+                                    class="blast animated bounceIn" aria-hidden="true">e</span><span
+                                    class="blast animated bounceIn" aria-hidden="true">l</span><span
+                                    class="blast animated bounceIn" aria-hidden="true">l</span><span
+                                    class="blast animated bounceIn" aria-hidden="true">o</span>
+                                <br />
+                                <span class="blast animated bounceIn" aria-hidden="true">I</span>
+                                <span class="blast animated bounceIn" aria-hidden="true">a</span><span
+                                    class="blast animated bounceIn" aria-hidden="true">m</span>
+                                <span class="highlight-text"><span class="blast animated bounceIn"
+                                        aria-hidden="true">S</span><span class="blast animated bounceIn"
+                                        aria-hidden="true">H</span><span class="blast animated bounceIn"
+                                        aria-hidden="true">U</span><span class="blast animated bounceIn"
+                                        aria-hidden="true">J</span><span class="blast animated bounceIn"
+                                        aria-hidden="true">A</span></span>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="section-1-description htmltagStyles htmlendtagStyles">
+                        <div>
+                            <span>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae ex vitae urna placerat rutrum. Aliquam erat volutpat.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="main-section-links">
+                        <div class="position-relative z-0">
+                            <a href="#contact">
+                                <button class="contact-me-main-landing btn-diagonal-swipe">
+                                    Contact me
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="character-content col-lg-5">
+                    <div class="">
+                        <!-- gif -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-page-section-1 row" id="about">
+            <div class="left-content col-lg-7">
+                <div class="section-title-wrapper">
+                    <div class="text-zone">
+                        <h2 class="section-title aboutus-section htmltagStyles htmlendtagStyles">
+                            <div class="title-bar">
+                                <span class="highlight-text">01.</span>
+                                <span>&nbsp;Me, Myself and I</span>
+                            </div>
+                        </h2>
+                    </div>
+                </div>
+                <div class="about-us-description htmltagStyles htmlendtagStyles">
+                    <p>
+                        An enthusiastic self-starter with strong programming and
+                        development skills. Proven academic and curricular achievements,
+                        and possess the right soft skills required to propel the
+                        organization achieving its goals and objectives.
+                    </p>
+                    <p>Professional Skills:</p>
+                </div>
+                <div class="about-us-list-items custom-list-styles position-relative htmltagStyles htmlendtagStyles">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>jQuery</li>
+                        <li>Angularjs</li>
+                        <li>Reactjs</li>
+                        <li>Ajax</li>
+                        <li>JSON</li>
+                        <li>Wordpress</li>
+                        <li>Laravel</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div id="myCanvasContainer">
+                    <canvas width="500" height="500" id="myCanvas">
+                        <ul>
+                            <li>
+                                <a data-weight="25" href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML</a>
+                            </li>
+                            <li>
+                                <a data-weight="25" href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets"
+                                    target="_blank">CSS</a>
+                            </li>
+                            <li>
+                                <a data-weight="25" href="https://en.wikipedia.org/wiki/JavaScript"
+                                    target="_blank">ES5/ES6</a>
+                            </li>
+                            <li>
+                                <a data-weight="25" href="https://en.wikipedia.org/wiki/JavaScript"
+                                    target="_blank">TypeScript</a>
+                            </li>
+                            <li>
+                                <a data-weight="24" href="https://en.wikipedia.org/wiki/Representational_state_transfer"
+                                    target="_blank">REST</a>
+                            </li>
+                            <li>
+                                <a data-weight="14" href="https://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a>
+                            </li>
+                            <li>
+                                <a data-weight="13" href="https://en.wikipedia.org/wiki/XML" target="_blank">GSAP</a>
+                            </li>
+                            <li>
+                                <a data-weight="14" href="https://en.wikipedia.org/wiki/Shopify"
+                                    target="_blank">Shopify</a>
+                            </li>
+                            <li>
+                                <a data-weight="26" href="https://en.wikipedia.org/wiki/WordPress"
+                                    target="_blank">Wordpress</a>
+                            </li>
+                            <li>
+                                <a data-weight="26" href="https://en.wikipedia.org/wiki/PHP" target="_blank">PHP</a>
+                            </li>
+                            <li>
+                                <a data-weight="26" href="https://en.wikipedia.org/wiki/Python_(programming_language)"
+                                    target="_blank">Python</a>
+                            </li>
+                            <li>
+                                <a data-weight="21" href="https://en.wikipedia.org/wiki/Node.js" target="_blank">Node
+                                    JS</a>
+                            </li>
+                            <li>
+                                <a data-weight="17" href="https://en.wikipedia.org/wiki/Git" target="_blank">Git</a>
+                            </li>
+                            <li><a data-weight="17" href="" target="_blank">_lodash</a></li>
+                            <li>
+                                <a data-weight="23" href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)"
+                                    target="_blank">Bootstrap</a>
+                            </li>
+                            <li>
+                                <a data-weight="15" href="https://en.wikipedia.org/wiki/Sass_(stylesheet_language)"
+                                    target="_blank">SASS</a>
+                            </li>
+                            <li>
+                                <a data-weight="24" href="https://reactjs.org/" target="_blank">ReactJS</a>
+                            </li>
+                            <li>
+                                <a data-weight="12" href="https://en.wikipedia.org/wiki/JQuery"
+                                    target="_blank">jQuery</a>
+                            </li>
+                            <li>
+                                <a data-weight="26" href="http://mongoosejs.com/" target="_blank">SQl</a>
+                            </li>
+                            <li>
+                                <a data-weight="19" href="http://gulpjs.com/" target="_blank">Gulp</a>
+                            </li>
+                            <li>
+                                <a data-weight="19" href="https://www.npmjs.com/" target="_blank">npm</a>
+                            </li>
+                            <li>
+                                <a data-weight="19" href="https://en.wikipedia.org/wiki/BEM" target="_blank">BEM</a>
+                            </li>
+                        </ul>
+                    </canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-page-section-1 row work-experience-section" id="jobs">
+            <div class="left-content col-lg-7">
+                <div class="section-title-wrapper">
+                    <div class="text-zone">
+                        <h2 class="section-title aboutus-section htmltagStyles htmlendtagStyles">
+                            <div class="title-bar">
+                                <span class="highlight-text">02.</span>
+                                <span>&nbsp;My Work Experience</span>
+                            </div>
+                        </h2>
+                    </div>
+                </div>
+
+                <div
+                    class="about-us-list-items position-relative htmltagStyles htmlendtagStyles work-experience-skills">
+                    <div class="d-flex align-items-start sAHTI">
+                        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
+                            aria-orientation="vertical">
+                            <button class="nav-link active" id="v-pills-tab-1" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1"
+                                aria-selected="true">
+                                MTech-Soft
+                            </button>
+                            <button class="nav-link" id="v-pills-tab-2" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-2" type="button" role="tab" aria-controls="v-pills-2"
+                                aria-selected="false">
+                                Programmer Force
+                            </button>
+                            <button class="nav-link" id="v-pills-tab-3" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-3" type="button" role="tab" aria-controls="v-pills-3"
+                                aria-selected="false">
+                                Aimitlab
+                            </button>
+                            <button class="nav-link" id="v-pills-tab-4" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-4" type="button" role="tab" aria-controls="v-pills-4"
+                                aria-selected="false">
+                                Webbuggs
+                            </button>
+                            <!-- <button class="nav-link" id="v-pills-tab-5" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-5" type="button" role="tab" aria-controls="v-pills-5"
+                                aria-selected="false">
+                                Arbisoft
+                            </button>
+                            <button class="nav-link" id="v-pills-tab-6" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-6" type="button" role="tab" aria-controls="v-pills-6"
+                                aria-selected="false">
+                                TEST
+                            </button> -->
+                        </div>
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel"
+                                aria-labelledby="v-pills-tab-1">
+                                <div class="work-experience-data">
+                                    <div class="experience-main-data">
+                                        <h3>Engineering</h3>
+                                        <p class="experience-tenure">Mar 2021 - Present</p>
+                                    </div>
+                                    <div class="work-experience-details">
+                                        <ul>
+                                            <li>
+                                              front-end developer
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-tab-2">
+                                <div class="experience-main-data">
+                                    <h3>Software Engineer</h3>
+                                    <p class="experience-tenure">Dec 2020 - Jul 2022</p>
+                                </div>
+                                <div class="work-experience-details">
+                                    <ul>
+                                        <li>
+                                            detail
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-tab-3">
+                                <div class="experience-main-data">
+                                    <h3>Technology </h3>
+                                    <p class="experience-tenure">May 2019 - Dec 2021</p>
+                                </div>
+                                <div class="work-experience-details">
+                                    <ul>
+                                        <li>
+                                     Experience
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-tab-4">
+                                <div class="experience-main-data">
+                                    <h3>Full Stack Developer</h3>
+                                    <p class="experience-tenure">Nov 2013 - Oct 2021</p>
+                                </div>
+                                <div class="work-experience-details">
+                                    <p>
+                                    ok
+                                    </p>
+                                    <ul>
+                                        <li>testone</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-tab-5">
+                                <div class="experience-main-data">
+                                    <h3>Software Engineer</h3>
+                                    <p class="experience-tenure">Nov 2012 - Nov 2013</p>
+                                </div>
+                                <div class="work-experience-details">
+                                    <ul>
+                                  
+                                    </ul>
+                                </div>
+                            </div> -->
+                            <!-- <div class="tab-pane fade" id="v-pills-6" role="tabpanel" aria-labelledby="v-pills-tab-6">
+                                <div class="experience-main-data">
+                                    <h3>Software developer</h3>
+                                    <p class="experience-tenure">Jul 2011 - Sep 2012</p>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-page-section-1 row" id="projects">
+            <div class="left-content col-lg-7">
+                <div class="section-title-wrapper">
+                    <div class="text-zone">
+                        <h2 class="section-title aboutus-section htmltagStyles htmlendtagStyles">
+                            <div class="title-bar">
+                                <span class="highlight-text">03.</span>
+                                <span>&nbsp;My featured projects</span>
+                            </div>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <ul class="featured__StyledProjectsGrid">
+                <li class="featured-project-item project-wrapper-mainj featured__StyledProject-ywnbqt-1 eeeRej">
+                    <div class="project-image">
+                        <a href="#" rel="noopener noreferrer" target="_blank">
+                            <div class="projects-image-wrapper gatsby-image-wrapper img">
+                                <div style="max-width: 700px; display: block">
+                                    <img alt="" role="presentation" aria-hidden="true"
+                                        src="data:image/svg+xml;charset=utf-8,%3Csvg height='438' width='700' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                                        style="max-width: 100%; display: block; position: static" />
+                                </div>
+                                <div>
+                                    <img width="700" height="438" sizes="(min-width: 700px) 700px, 100vw"
+                                        decoding="async"
+                                        src="please add image"
+                                        style="object-fit: cover; opacity: 1" />
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="featured-project-details project-content">
+                        <div>
+                            <p class="project-overline">Featured Project</p>
+                            <h3 class="project-title">
+                                <a href="#" rel="noopener noreferrer" target="_blank">AI</a>
+                            </h3>
+                            <div class="project-description">
+                                <p>
+                                    As I reflect on my initial project, I fondly recall my
+                                    involvement in
+                                    <a href="#" target="_blank"
+                                        rel="noopener noreferrer">CharacterGPT</a>,
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae ex vitae urna placerat rutrum. Aliquam erat volutpat.
+                                </p>
+                            </div>
+                            <ul class="project-tech-list">
+                                <li>JQuery</li>
+                                <li>Nginx</li>
+                                <li>Bootstrap</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="#" class="external" rel="noopener noreferrer"
+                                    target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="featured-project-item project-wrapper-mainj featured__StyledProject-ywnbqt-1 eeeRej">
+                    <div class="project-image">
+                        <a href="#" rel="noopener noreferrer" target="_blank">
+                            <div class="projects-image-wrapper projects-image-wrapper-constrained img">
+                                <div class="image-wrapper-inner">
+                                    <img role="presentation" aria-hidden="true"
+                                        src="#" />
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="project-image">
+                        <a href="#" rel="noopener noreferrer" target="_blank">
+                            <div class="projects-image-wrapper gatsby-image-wrapper img">
+                                <div style="max-width: 700px; display: block">
+                                    <img alt="" role="presentation" aria-hidden="true"
+                                        src="data:image/svg+xml;charset=utf-8,%3Csvg height='438' width='700' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                                        style="max-width: 100%; display: block; position: static" />
+                                </div>
+                                <div>
+                                    <img width="700" height="438" sizes="(min-width: 700px) 700px, 100vw"
+                                        decoding="async"
+                                        src="#"
+                                        style="object-fit: cover; opacity: 1" />
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="featured-project-details project-content">
+                        <div>
+                            <p class="project-overline">Featured Project</p>
+                            <h3 class="project-title">
+                                <a href="#" rel="noopener noreferrer" target="_blank">Mycharacter
+                                    AI</a>
+                            </h3>
+                            <div class="project-description">
+                                <p>
+                                    My other endeavor,
+                                    <a href="#" target="_blank"
+                                        rel="noopener noreferrer">MyCharacter.ai</a>, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae ex vitae urna placerat rutrum. Aliquam erat volutpat.
+                                </p>
+                            </div>
+                            <ul class="project-tech-list">
+                                <li>Node.js</li>
+                                <li>React</li>
+                                <li>Next.js</li>
+                                <li>Bootstrap</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="#" class="external" rel="noopener noreferrer"
+                                    target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="featured-project-item project-wrapper-mainj featured__StyledProject-ywnbqt-1 eeeRej">
+                    <div class="project-image">
+                        <a href="#" rel="noopener noreferrer" target="_blank">
+                            <div class="projects-image-wrapper gatsby-image-wrapper img">
+                                <div style="max-width: 700px; display: block">
+                                    <img alt="" role="presentation" aria-hidden="true"
+                                        src="data:image/svg+xml;charset=utf-8,%3Csvg height='438' width='700' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                                        style="max-width: 100%; display: block; position: static" />
+                                </div>
+                                <div>
+                                    <img width="700" height="438" sizes="(min-width: 700px) 700px, 100vw"
+                                        decoding="async"
+                                        src="#"
+                                        style="object-fit: cover; opacity: 1" />
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="featured-project-details project-content">
+                        <div>
+                            <p class="project-overline">Featured Project</p>
+                            <h3 class="project-title">
+                                <a href="#" rel="noopener noreferrer" target="_blank">Squibler</a>
+                            </h3>
+                            <div class="project-description">
+                                <p>
+                                    <a href="#" target="_blank"
+                                        rel="noopener noreferrer">Talha noni</a>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae ex vitae urna placerat rutrum. Aliquam erat volutpat.
+                                </p>
+                            </div>
+                            <ul class="project-tech-list">
+                                <li>jQuery</li>
+                                <li>Segment</li>
+                                <li>lubenda</li>
+                                <li>Popper</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="#" class="external" rel="noopener noreferrer"
+                                    target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <!-- new content -->
+            <section class="projects__StyledProjectsSection-sc-1v1fime-0 note-worthy-projects">
+                <h2>Other  Projects</h2>
+                <ul class="projects-grid">
+                    <li class="note-worthy-projects-inner">
+                        <div class="project-inner">
+                            <header>
+                                <div class="project-top">
+                                    <div class="folder">
+                                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                                            stroke-linejoin="round" class="feather feather-folder">
+                                            <title>Folder</title>
+                                            <path
+                                                d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="#" aria-label="External Link" class="external"
+                                            target="_blank" rel="noopener noreferrer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-external-link">
+                                                <title>External Link</title>
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6">
+                                                </path>
+                                                <polyline points="15 3 21 3 21 9"></polyline>
+                                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h3 class="project-title">
+                                    <a href="#" target="_blank"
+                                        rel="noopener noreferrer">Project 1</a>
+                                </h3>
+                                <div class="project-description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae ex vitae urna placerat rutrum. Aliquam erat volutpat.
+                                    </p>
+                                </div>
+                            </header>
+                            <footer>
+                                <ul class="project-tech-list">
+                                    <li>JQuery</li>
+                                    <li>Nginx</li>
+                                    <li>Bootstrap</li>
+                                </ul>
+                            </footer>
+                        </div>
+                    </li>
+                    <li class="note-worthy-projects-inner">
+                        <div class="project-inner">
+                            <header>
+                                <div class="project-top">
+                                    <div class="folder">
+                                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                                            stroke-linejoin="round" class="feather feather-folder">
+                                            <title>Folder</title>
+                                            <path
+                                                d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="#" aria-label="External Link"
+                                            class="external" target="_blank" rel="noopener noreferrer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-external-link">
+                                                <title>External Link</title>
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6">
+                                                </path>
+                                                <polyline points="15 3 21 3 21 9"></polyline>
+                                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h3 class="project-title">
+                                    <a href="#" target="_blank"
+                                        rel="noopener noreferrer">Nothing Care</a>
+                                </h3>
+                                <div class="project-description">
+                                    <p>
+                                        Introducing the all-natural deodorant by Nothing.care, the
+                                        brand that prioritizes people and the environment alike.
+                                    </p>
+                                </div>
+                            </header>
+                            <footer>
+                                <ul class="project-tech-list">
+                                    <li>JQuery</li>
+                                    <li>Nginx</li>
+                                    <li>Bootstrap</li>
+                                </ul>
+                            </footer>
+                        </div>
+                    </li>
+                    <li class="note-worthy-projects-inner">
+                        <div class="project-inner">
+                            <header>
+                                <div class="project-top">
+                                    <div class="folder">
+                                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                                            stroke-linejoin="round" class="feather feather-folder">
+                                            <title>Folder</title>
+                                            <path
+                                                d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="#" aria-label="External Link" class="external"
+                                            target="_blank" rel="noopener noreferrer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-external-link">
+                                                <title>External Link</title>
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6">
+                                                </path>
+                                                <polyline points="15 3 21 3 21 9"></polyline>
+                                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h3 class="project-title">
+                                    <a href="#" target="_blank" rel="noopener noreferrer">Search with WordPress </a>
+                                </h3>
+                                <div class="project-description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae ex vitae urna placerat rutrum. Aliquam erat volutpat.
+                                    </p>
+                                </div>
+                            </header>
+                            <footer>
+                                <ul class="project-tech-list">
+                                    <li>JQuery</li>
+                                    <li>Nginx</li>
+                                    <li>Bootstrap</li>
+                                </ul>
+                            </footer>
+                        </div>
+                    </li>
+                    <li class="note-worthy-projects-inner">
+                        <div class="project-inner">
+                            <header>
+                                <div class="project-top">
+                                    <div class="folder">
+                                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                                            stroke-linejoin="round" class="feather feather-folder">
+                                            <title>Folder</title>
+                                            <path
+                                                d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="#" aria-label="External Link" class="external"
+                                            target="_blank" rel="noopener noreferrer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-external-link">
+                                                <title>External Link</title>
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6">
+                                                </path>
+                                                <polyline points="15 3 21 3 21 9"></polyline>
+                                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h3 class="project-title">
+                                    <a href="#" target="_blank"
+                                        rel="noopener noreferrer">Project 4</a>
+                                </h3>
+                                <div class="project-description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae ex vitae urna placerat rutrum. Aliquam erat volutpat.
+                                    </p>
+                                </div>
+                            </header>
+                            <footer>
+                                <ul class="project-tech-list">
+                                    <li>JQuery</li>
+                                    <li>Nginx</li>
+                                    <li>Bootstrap</li>
+                                </ul>
+                            </footer>
+                        </div>
+                    </li>
+                    <li class="note-worthy-projects-inner">
+                        <div class="project-inner">
+                            <header>
+                                <div class="project-top">
+                                    <div class="folder">
+                                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                                            stroke-linejoin="round" class="feather feather-folder">
+                                            <title>Folder</title>
+                                            <path
+                                                d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="#" aria-label="External Link" class="external"
+                                            target="_blank" rel="noopener noreferrer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-external-link">
+                                                <title>External Link</title>
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6">
+                                                </path>
+                                                <polyline points="15 3 21 3 21 9"></polyline>
+                                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h3 class="project-title">
+                                    <a href="#" target="_blank"
+                                        rel="noopener noreferrer">project 5</a>
+                                </h3>
+                                <div class="project-description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae ex vitae urna placerat rutrum. Aliquam erat volutpat.
+                                    </p>
+                                </div>
+                            </header>
+                            <footer>
+                                <ul class="project-tech-list">
+                                    <li>JQuery</li>
+                                    <li>Nginx</li>
+                                    <li>Bootstrap</li>
+                                </ul>
+                            </footer>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="home-page-section-1 row portfolio-slider-section" id="testimonials">
+            <div class="left-content col-lg-6">
+                <div class="section-title-wrapper">
+                    <div class="text-zone">
+                        <h2 class="section-title aboutus-section htmltagStyles htmlendtagStyles">
+                            <div class="title-bar">
+                                <span class="highlight-text">04.</span>
+                                <span>&nbsp;Testimonials</span>
+                            </div>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-slider-wrapper">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" >
+                            slider 1
+                        </div>
+                        <div class="swiper-slide">
+                            slider 2
+                        </div>
+                        <div class="swiper-slide" >
+                            slider 3
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonials-nav-wrapper">
+                    <div class="swiper-button-prev">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                    <div class="swiper-button-next">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-page-section-1 row section-blog" id="blog">
+            <div class="left-content col-lg-6">
+                <div class="section-title-wrapper">
+                    <div class="text-zone">
+                        <h2 class="section-title aboutus-section htmltagStyles htmlendtagStyles">
+                            <div class="title-bar">
+                                <span class="highlight-text">05.</span>
+                                <span>&nbsp;Blog</span>
+                            </div>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-articles">
+                <article class="post-article" style="border-top-color: #14f5d3">
+                    <div class="post-content">
+                        <time class="post-date" style="color: #e4ee89">
+                            Computer Science
+                        </time>
+                        <div class="blog-post-title">
+                            <h5>
+                                <a href="#">Algorithms and Data Structures (Part 1)</a>
+                            </h5>
+                        </div>
+                        <div class="blog-post-content">
+                            "Lorem Ipsum" is a placeholder text used in the design and printing industry to fill in space where actual text will eventually go.
+                        </div>
+                    </div>
+                </article>
+                <article class="post-article" style="border-top-color: #14f5d3">
+                    <div class="post-content">
+                        <time class="post-date" style="color: #e4ee89">
+                            SQL &amp; Databases
+                        </time>
+                        <div class="blog-post-title">
+                            <h5>
+                                <a href="#">Database Queries to One Table (Part 1)</a>
+                            </h5>
+                        </div>
+                        <div class="blog-post-content">
+                            "Lorem Ipsum" is a placeholder text used in the design and printing industry to fill in space where actual text will eventually go.
+                        </div>
+                    </div>
+                </article>
+                <article class="post-article" style="border-top-color: #14f5d3">
+                    <div class="post-content">
+                        <time class="post-date" style="color: #e4ee89">
+                            SQL &amp; Databases
+                        </time>
+                        <div class="blog-post-title">
+                            <h5>
+                                <a href="#">How to Create a Database Using the MongoDB Atlas UI</a>
+                            </h5>
+                        </div>
+                        <div class="blog-post-content">
+                            MongoDB has been at the forefront of application development for developers…
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="home-page-section-1 row" id="contact">
+            <div class="left-content col-lg-7">
+                <div class="section-title-wrapper">
+                    <div class="text-zone">
+                        <h2 class="section-title aboutus-section htmltagStyles htmlendtagStyles">
+                            <div class="title-bar">
+                                <span class="highlight-text">06.</span>
+                                <span>&nbsp;Contact Me</span>
+                            </div>
+                        </h2>
+                    </div>
+                </div>
+                <div class="about-us-description htmltagStyles htmlendtagStyles">
+                    <p>
+                        Although I’m not currently looking for any new opportunities, my
+                        inbox is always open. Whether you have a question or just want to
+                        say hi, I’ll try my best to get back to you!
+                    </p>
+                </div>
+                <div class="form-items position-relative htmltagStyles htmlendtagStyles">
+                    <form class="row g-3">
+                        <div class="col-md-6 mb-3">
+                            <div class="fadeInUp-animated">
+                                <input type="text"
+                                    class="form-control userContactInput input__field input__field--hoshi" id="username"
+                                    required="" placeholder="Name" autocomplete="off" />
+                                <span class="input__label input__label--hoshi input__label--hoshi-color-2"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="fadeInUp-animated">
+                                <input type="email"
+                                    class="form-control userContactInput input__field input__field--hoshi"
+                                    id="userEmail" required="" aria-describedby="emailHelp" placeholder="Email address"
+                                    autocomplete="off" />
+                                <span class="input__label input__label--hoshi input__label--hoshi-color-2"></span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="fadeInUp-animated">
+                                <input type="text"
+                                    class="form-control userContactInput input__field input__field--hoshi"
+                                    id="usersubject" required="" placeholder="Subject of message" />
+                                <span class="input__label input__label--hoshi input__label--hoshi-color-2"></span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="fadeInUp-animated">
+                                <textarea class="form-control userContactInput input__field input__field--hoshi"
+                                    id="userMessage" placeholder="Write message here" required="" rows="8"></textarea>
+                                <span class="input__label input__label--hoshi input__label--hoshi-color-2"></span>
+                            </div>
+                        </div>
+                        <div class="col-12 contact-form-buttons">
+                            <button class="btn-diagonal-swipe">Send Message</button>
+                            <button class="btn cancel-btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="spacing-location-map col-lg-5">
+                <div class="location-mape">
+                    <div id="portfolio-map" width="600" height="600" style="border: 0">
+                        <div style="height: 100%; width: 100%">
+                            <div style="overflow: hidden"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div orientation="left" class="Fixed-social-sidebar">
+        <ul class="sidebar-line-height fade-enter-done">
+            <li>
+                <a href="#" aria-label="GitHub" target="_blank" rel="noreferrer">
+                    <div class="wrapper">
+                        <div class="icon GitHub">
+                            <span class="tooltip-custom">GitHub</span>
+                            <img src="./assests/image/github.svg" alt="github" />
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" aria-label="Linkedin" target="_blank"
+                    rel="noreferrer">
+                    <div class="wrapper">
+                        <div class="icon Linkedin">
+                            <span class="tooltip-custom">Linkedin</span>
+                            <img src="./assests/image/linkedin.svg" alt="linkedin" />
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" aria-label="hackerrank" target="_blank"
+                    rel="noreferrer">
+                    <div class="wrapper">
+                        <div class="icon hackerrank">
+                            <span class="tooltip-custom">Hackerrank</span>
+                            <img src="#" alt="hackerrank" />
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="shuja">
+        <div id="deadline">
+            <svg preserveAspectRatio="none" id="line" viewBox="0 0 581 158" enable-background="new 0 0 581 158">
+              <g id="fire">
+                <rect id="mask-fire-black" x="511" y="41" width="38" height="34"/>
+                <g>
+                  <defs>
+                    <rect id="mask_fire" x="511" y="41" width="38" height="34"/>
+                  </defs>
+                  <clipPath id="mask-fire_1_">
+                    <use xlink:href="#mask_fire"  overflow="visible"/>
+                  </clipPath>
+                  <g id="group-fire" clip-path="url(#mask-fire_1_)">
+                    <path id="red-flame" fill="#B71342" d="M528.377,100.291c6.207,0,10.947-3.272,10.834-8.576 c-0.112-5.305-2.934-8.803-8.237-10.383c-5.306-1.581-3.838-7.9-0.79-9.707c-7.337,2.032-7.581,5.891-7.11,8.238 c0.789,3.951,7.56,4.402,5.077,9.48c-2.482,5.079-8.012,1.129-6.319-2.257c-2.843,2.233-4.78,6.681-2.259,9.703 C521.256,98.809,524.175,100.291,528.377,100.291z"/>
+                    <path id="yellow-flame" opacity="0.71" fill="#F7B523" d="M528.837,100.291c4.197,0,5.108-1.854,5.974-5.417 c0.902-3.724-1.129-6.207-5.305-9.931c-2.396-2.137-1.581-4.176-0.565-6.32c-4.401,1.918-3.384,5.304-2.482,6.658 c1.511,2.267,2.099,2.364,0.42,5.8c-1.679,3.435-5.42,0.764-4.275-1.527c-1.921,1.512-2.373,4.04-1.528,6.563 C522.057,99.051,525.994,100.291,528.837,100.291z"/>
+                    <path id="white-flame" opacity="0.81" fill="#FFFFFF" d="M529.461,100.291c-2.364,0-4.174-1.322-4.129-3.469 c0.04-2.145,1.117-3.56,3.141-4.198c2.022-0.638,1.463-3.195,0.302-3.925c2.798,0.821,2.89,2.382,2.711,3.332 c-0.301,1.597-2.883,1.779-1.938,3.834c0.912,1.975,3.286,0.938,2.409-0.913c1.086,0.903,1.826,2.701,0.864,3.924 C532.18,99.691,531.064,100.291,529.461,100.291z"/>
+                  </g>
+                </g>
+              </g>
+              <g id="progress-trail">
+                <path fill="#FFFFFF" d="M491.979,83.878c1.215-0.73-0.62-5.404-3.229-11.044c-2.583-5.584-5.034-10.066-7.229-8.878
+                                        c-2.854,1.544-0.192,6.286,2.979,11.628C487.667,80.917,490.667,84.667,491.979,83.878z"/>
+                <path fill="#FFFFFF" d="M571,76v-5h-23.608c0.476-9.951-4.642-13.25-4.642-13.25l-3.125,4c0,0,3.726,2.7,3.625,5.125
+                                        c-0.071,1.714-2.711,3.18-4.962,4.125H517v5h10v24h-25v-5.666c0,0,0.839,0,2.839-0.667s6.172-3.667,4.005-6.333
+                                        s-7.49,0.333-9.656,0.166s-6.479-1.5-8.146,1.917c-1.551,3.178,0.791,5.25,5.541,6.083l-0.065,4.5H16c-2.761,0-5,2.238-5,5v17
+                                        c0,2.762,2.239,5,5,5h549c2.762,0,5-2.238,5-5v-17c0-2.762-2.238-5-5-5h-3V76H571z"/>
+                <path fill="#FFFFFF" d="M535,65.625c1.125,0.625,2.25-1.125,2.25-1.125l11.625-22.375c0,0,0.75-0.875-1.75-2.125
+                                        s-3.375,0.25-3.375,0.25s-8.75,21.625-9.875,23.5S533.875,65,535,65.625z"/>
+              </g>
+              <g>
+                <defs>
+                  <path id="SVGID_1_" d="M484.5,75.584c-3.172-5.342-5.833-10.084-2.979-11.628c2.195-1.188,4.646,3.294,7.229,8.878
+                                         c2.609,5.64,4.444,10.313,3.229,11.044C490.667,84.667,487.667,80.917,484.5,75.584z M571,76v-5h-23.608
+                                         c0.476-9.951-4.642-13.25-4.642-13.25l-3.125,4c0,0,3.726,2.7,3.625,5.125c-0.071,1.714-2.711,3.18-4.962,4.125H517v5h10v24h-25
+                                         v-5.666c0,0,0.839,0,2.839-0.667s6.172-3.667,4.005-6.333s-7.49,0.333-9.656,0.166s-6.479-1.5-8.146,1.917
+                                         c-1.551,3.178,0.791,5.25,5.541,6.083l-0.065,4.5H16c-2.761,0-5,2.238-5,5v17c0,2.762,2.239,5,5,5h549c2.762,0,5-2.238,5-5v-17
+                                         c0-2.762-2.238-5-5-5h-3V76H571z M535,65.625c1.125,0.625,2.25-1.125,2.25-1.125l11.625-22.375c0,0,0.75-0.875-1.75-2.125
+                                         s-3.375,0.25-3.375,0.25s-8.75,21.625-9.875,23.5S533.875,65,535,65.625z"/>
+                </defs>
+                <clipPath id="SVGID_2_">
+                  <use xlink:href="#SVGID_1_"  overflow="visible"/>
+                </clipPath>
+                <rect id="progress-time-fill" x="-100%" y="34" clip-path="url(#SVGID_2_)" fill="#12d8be" width="586" height="103"/>
+              </g>
+          
+              <g id="death-group">
+                <path id="death" fill="#12d8be" d="M-46.25,40.416c-5.42-0.281-8.349,3.17-13.25,3.918c-5.716,0.871-10.583-0.918-10.583-0.918
+                                                   C-67.5,49-65.175,50.6-62.083,52c5.333,2.416,4.083,3.5,2.084,4.5c-16.5,4.833-15.417,27.917-15.417,27.917L-75.5,84.75
+                                                   c-1,12.25-20.25,18.75-20.25,18.75s39.447,13.471,46.25-4.25c3.583-9.333-1.553-16.869-1.667-22.75
+                                                   c-0.076-3.871,2.842-8.529,6.084-12.334c3.596-4.22,6.958-10.374,6.958-15.416C-38.125,43.186-39.833,40.75-46.25,40.416z
+                                                   M-40,51.959c-0.882,3.004-2.779,6.906-4.154,6.537s-0.939-4.32,0.112-7.704c0.82-2.64,2.672-5.96,3.959-5.583
+                                                   C-39.005,45.523-39.073,48.8-40,51.959z"/>
+                <path id="death-arm" fill="#12d8be" d="M-53.375,75.25c0,0,9.375,2.25,11.25,0.25s2.313-2.342,3.375-2.791
+                                                       c1.083-0.459,4.375-1.75,4.292-4.75c-0.101-3.627,0.271-4.594,1.333-5.043c1.083-0.457,2.75-1.666,2.75-1.666
+                                                       s0.708-0.291,0.5-0.875s-0.791-2.125-1.583-2.959c-0.792-0.832-2.375-1.874-2.917-1.332c-0.542,0.541-7.875,7.166-7.875,7.166
+                                                       s-2.667,2.791-3.417,0.125S-49.833,61-49.833,61s-3.417,1.416-3.417,1.541s-1.25,5.834-1.25,5.834l-0.583,5.833L-53.375,75.25z"/>
+                <path id="death-tool" fill="#12d8be" d="M-20.996,26.839l-42.819,91.475l1.812,0.848l38.342-81.909c0,0,8.833,2.643,12.412,7.414
+                                                        c5,6.668,4.75,14.084,4.75,14.084s4.354-7.732,0.083-17.666C-10,32.75-19.647,28.676-19.647,28.676l0.463-0.988L-20.996,26.839z"/>
+              </g>
+              <path id="designer-body" fill="#12d8be" d="M514.75,100.334c0,0,1.25-16.834-6.75-16.5c-5.501,0.229-5.583,3-10.833,1.666
+                                                         c-3.251-0.826-5.084-15.75-0.834-22c4.948-7.277,12.086-9.266,13.334-7.833c2.25,2.583-2,10.833-4.5,14.167
+                                                         c-2.5,3.333-1.833,10.416,0.5,9.916s8.026-0.141,10,2.25c3.166,3.834,4.916,17.667,4.916,17.667l0.917,2.5l-4,0.167L514.75,100.334z
+                                                         "/>
+          
+              <circle id="designer-head" fill="#12d8be" cx="516.083" cy="53.25" r="6.083"/>
+          
+              <g id="designer-arm-grop">
+                <path id="designer-arm" fill="#12d8be" d="M505.875,64.875c0,0,5.875,7.5,13.042,6.791c6.419-0.635,11.833-2.791,13.458-4.041s2-3.5,0.25-3.875
+                                                          s-11.375,5.125-16,3.25c-5.963-2.418-8.25-7.625-8.25-7.625l-2,1.125L505.875,64.875z"/>
+                <path id="designer-pen" fill="#12d8be" d="M525.75,59.084c0,0-0.423-0.262-0.969,0.088c-0.586,0.375-0.547,0.891-0.547,0.891l7.172,8.984l1.261,0.453
+                                                          l-0.104-1.328L525.75,59.084z"/>
+              </g>
+            </svg>
+          
+            <div class="deadline-days">
+              Deadline <span class="day">7</span> <span class="days">days</span>
+            </div>
+          
+          </div>  
+    </div>
+
+    <script src="./assests/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ahmedjawed.com/wp-content/themes/bootstrap-fitness/custom-scripts/hovertreewelcome.js"></script>
+    <script src="./assests/js/animation.js"></script>
+    <script src="./assests/js/tagcanvas.js"></script>
+    <script src="./assests/js/swiper-bundle.min.js"></script>
+    <script src="./assests/js/main.js"></script>
+    <script src="./assests/js/navigation.js"></script>
+    <script src="./assests/js/app.js"></script>
+</body>
+
+</html>
