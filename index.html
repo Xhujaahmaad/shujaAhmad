@@ -43,17 +43,30 @@
     <link rel="stylesheet" href="./assests/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./assests/css/custom-style.css" />
     <link rel="stylesheet" href="./assests/css/svg.css">
+    <link rel="stylesheet" href="./assests/css/gsap.css">
     <style>
 .shuja {
     align-items: center;
     display: flex;
     justify-content: flex-end;
 }
+.cmenu-item a {
+    all: unset;
+}
     </style>
     <title>Shuja ahmad</title>
 </head>
 
 <body class="home  wp-embed-responsive">
+    <div class="menu-wrapper">
+        <div class="inner-wrapper">
+          <div class="cmenu-item" href="#about">About</div>
+          <div class="cmenu-item" href="#jobs"> Experience</div>
+          <div class="cmenu-item" href="#projects">Work</div>
+          <div class="cmenu-item" href="#blog">Blog</div>
+          <div class="cmenu-item" href="#contact">Contact</div>
+        </div>
+      </div>
     <menu class="main-menu">
         <div class="mbtn mbtn-cl">
             <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img"
@@ -324,9 +337,18 @@
                     <a class="resume-button contact-me-main-landing btn-diagonal-swipe" href="#"
                         target="_blank" rel="noopener noreferrer">Resume</a>
                 </div>
+                
+               
             </div>
-            <div class="nav-menu-mobile">
-                <i class="fa-solid fa-bars"></i>
+            <div class="nav-menu-mobileone">
+                <!-- <i class="fa-solid fa-bars"></i> -->
+                <div class="gsapmenu">
+                    <div id="hamburger">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                      </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -1348,6 +1370,9 @@
     <script src="./assests/js/main.js"></script>
     <script src="./assests/js/navigation.js"></script>
     <script src="./assests/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>  
+    <script src="https://codepen.io/MoustafaJazzar/pen/QaEZBO.js"></script>   
+    <script src="./assests/js/gsap.js"></script> 
 </body>
 
 </html>

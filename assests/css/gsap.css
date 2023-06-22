@@ -1,0 +1,81 @@
+
+#hamburger {
+    cursor: pointer;
+    width: 20px;
+    margin: 0px;
+    z-index: 10;
+    position: relative;
+  }
+  
+  #hamburger .line {
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    display: block;
+    margin: 8px auto;
+    transition: all 0.15s ease-in-out;
+  }
+  
+  #hamburger.is-active .line:nth-child(1) {
+    transform: translateY(13px);
+  }
+  
+  #hamburger.is-active .line:nth-child(3) {
+    transform: translateY(-13px);
+  }
+  
+  .menu-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    background: black;
+    display: grid;
+    place-content: center;
+    perspective: 700px;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.24);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .inner-wrapper {
+    font-weight: 700;
+    font-size: calc(6vw + 20px);
+    letter-spacing: -0.6vw;
+    white-space: nowrap;
+    line-height: 0.97em;
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    padding-top: 10%;
+  
+    .cmenu-item {
+      display: block;
+      position: relative;
+      margin-top: -0.25em;
+      background: -webkit-linear-gradient(
+        #161616 5%,
+        rgba(255, 255, 255, 0.473) 85%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      cursor: pointer;
+  
+      &:hover {
+        background: -webkit-linear-gradient(#000000 5%, rgb(255, 255, 255) 85%);
+        -webkit-background-clip: text;
+      }
+    }
+  
+    @for $i from 1 through 5 {
+      .cmenu-item:nth-child(#{$i}) {
+        z-index: 5 - $i;
+      }
+    }
+  }
+  
