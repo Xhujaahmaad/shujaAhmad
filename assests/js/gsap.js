@@ -54,8 +54,8 @@ menuAnchor.addEventListener('click', function() {
 
 addEventListener('mousemove', e => {
 	gsap.to('.inner-wrapper', {
-		// rotateY: gsap.utils.mapRange(0, innerWidth, -5, 5, e.pageX),
-		// rotateX: gsap.utils.mapRange(0, innerHeight, -5, 5, e.pageY),
+		rotateY: gsap.utils.mapRange(0, innerWidth, 0, 1, e.pageX),
+		rotateX: gsap.utils.mapRange(0, innerHeight, 0, 1, e.pageY),
 		ease: 'power.out'
 	});
 });
