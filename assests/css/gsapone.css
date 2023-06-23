@@ -1,0 +1,105 @@
+
+    
+.intro{
+    display:flex;
+    flex-direction:row;
+    color: white;
+    }
+    
+    .indeks{
+    border-bottom: 2px solid #0dcaf0;
+    padding: 0.2em 0;
+    width: 0.6em;
+    animation: indeks 0.7s infinite;
+    }
+    
+    
+    @keyframes indeks{
+      0%{
+      opacity:0;
+      }
+      100%{
+      opacity:1;
+      }
+    }
+
+    
+.windowme {
+    border-top:25px solid #b4b4b4;
+    border-radius:10px;
+    padding:2%;
+    
+  }
+  ul.tab {
+    list-style: none;
+}
+
+ul.windowme.sublime {
+    text-align: start;
+}
+  
+  .sublime {
+    list-style:none;
+    background:#262728;
+    color:#f1f1f1;
+    font-family:Menlo;
+    font-weight:200;
+    /* From https://css.glass */
+    background: rgba(13, 202, 240, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.6px);
+    -webkit-backdrop-filter: blur(2.6px);
+  }
+  .sublime   li {
+      height:25px;
+      line-height:25px;
+    }
+    .tab {
+      margin-left:2%;
+      list-style:none;
+    }
+    .red {
+      color:#EB5E5B;
+    }
+    .blue {
+      color:#5695BF;
+    }
+    .green {
+      color:#5AE897;
+    }
+    .yellow {
+      color:#F1D35C;
+    }
+    .redcircle{
+        place-self: center center;
+        height: 15px;
+        width: 15px;
+        border-radius: 100%;
+        background-color: #f44336;
+    }
+    .yellowcircle{
+        place-self: center center;
+        height: 15px;
+        width: 15px;
+        border-radius: 100%;
+        background-color: #ffeb3b;
+    }
+    .greencircle{
+        place-self: center center;
+        height: 15px;
+        width: 15px;
+        border-radius: 100%;
+        background-color: #4caf50;
+    }
+    .workbench {
+        display: flex;
+        gap: 4px;
+        position: absolute;
+        z-index: 1;
+        left: 4%;
+        top: 1%;
+    }
+    .mainpartentvs{
+        position: relative;
+    }
+  
