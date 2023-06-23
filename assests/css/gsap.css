@@ -49,11 +49,11 @@
     font-size: calc(6vw + 20px);
     letter-spacing: -0.6vw;
     white-space: nowrap;
-    line-height: 0.97em;
+    line-height: 50px;
     display: block;
     position: relative;
     text-transform: uppercase;
-    padding-top: 10%;
+ 
   
     .cmenu-item {
       display: block;
@@ -93,9 +93,9 @@
       display: flex;
       justify-content: center;
       position: absolute;
-      bottom: 0;
       width: 100%;
       bottom: 16px;
+      margin-bottom: 12px !important;
   }
   }
 
