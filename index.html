@@ -45,6 +45,10 @@
     <link rel="stylesheet" href="./assests/css/svg.css">
     <link rel="stylesheet" href="./assests/css/gsap.css">
     <link rel="stylesheet" href="./assests/css/gsapone.css">
+    <link rel="stylesheet" href="./assests/css/flipbook.css">  
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
     <style>
 
 .cmenu-item a {
@@ -58,7 +62,11 @@
     margin-top: 50px;
 }
 }
-
+@media screen and (max-width: 360px){
+    ul.tab li span {
+    font-size: 11px;
+}    
+}
     </style>
     <title>Shuja ahmad</title>
 </head>
@@ -1266,28 +1274,8 @@
                     </div>
                 </div>
             </div>
-            <div class="portfolio-slider-wrapper">
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide" >
-                            slider 1
-                        </div>
-                        <div class="swiper-slide">
-                            slider 2
-                        </div>
-                        <div class="swiper-slide" >
-                            slider 3
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonials-nav-wrapper">
-                    <div class="swiper-button-prev">
-                        <i class="fa-solid fa-arrow-left"></i>
-                    </div>
-                    <div class="swiper-button-next">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
+            <div class="portfolio-slider-wrapper ">
+            
             </div>
         </div>
 
@@ -1444,13 +1432,8 @@
                 </div>
             </div>
             <div class="spacing-location-map col-lg-5">
-                <div class="location-mape">
-                    <div id="portfolio-map"  style="border: 0">
-                        <div>
-                          
-                        </div>
-                    </div>
-                </div>
+
+            </div>
             </div>
         </div>
     </div>
@@ -1491,9 +1474,6 @@
             </li>
         </ul>
     </div>
-      <div class="cursor"></div>
-     <div class="cursor2"></div>
- 
 
     <script src="./assests/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
